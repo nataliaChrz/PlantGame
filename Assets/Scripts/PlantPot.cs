@@ -26,7 +26,7 @@ public class PlantPot : MonoBehaviour
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);
             }
-            nearTo = null; //set to null when we're done
+            nearTo = null;
         }
     }
 
