@@ -6,6 +6,8 @@ public class Bed : MonoBehaviour
 {
     private GameObject nearTo = null;
 
+    public GameObject bedText;
+
     public int sleepDays;
     
     void Start()
@@ -16,7 +18,7 @@ public class Bed : MonoBehaviour
     
     private void Update()
     {
-        if (nearTo != null && Input.GetKeyDown(KeyCode.B))
+        if (nearTo != null && Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log("Key Press");
 
@@ -34,6 +36,7 @@ public class Bed : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             nearTo = other.gameObject;
+            bedText.SetActive(true);
         }
     }
 
@@ -41,6 +44,7 @@ public class Bed : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            bedText.SetActive(false);
             nearTo = null;
         }
     }

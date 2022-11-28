@@ -6,6 +6,7 @@ public class Seed : MonoBehaviour
 {
     public static int seedCount;
     public GameObject seedObj;
+    public GameObject textPick;
 
     //Make an object with text "Press P to pick up"
     //public GameObject seedText;
@@ -19,7 +20,7 @@ public class Seed : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //seedText.SetActive(true);
+            textPick.SetActive(true);
         }
     }
 
@@ -29,7 +30,7 @@ public class Seed : MonoBehaviour
         {
             seedObj.SetActive(false);
             seedCount += 1;
-
+            textPick.SetActive(false);
             Debug.Log("Seed has been picked up " + seedCount);
             
         }
@@ -37,6 +38,6 @@ public class Seed : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        //seedText.SetActive(false);
+        textPick.SetActive(false);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlantPot : MonoBehaviour
 {
     public GameObject sprout;
+    public GameObject textPlant;
     private GameObject nearTo = null;
 
     public bool planted = false;
@@ -14,7 +15,7 @@ public class PlantPot : MonoBehaviour
     public void Start()
     {
         sprout.SetActive(false);
-
+        
     }
 
     private void Update()
@@ -30,7 +31,7 @@ public class PlantPot : MonoBehaviour
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);
                 planted = true;
-
+                textPlant.SetActive(false);
                 Debug.Log(planted);
             }
             nearTo = null;
@@ -52,16 +53,19 @@ public class PlantPot : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Seed.seedCount >= 1)
         {
+
+            textPlant.SetActive(true);
             nearTo = other.gameObject;
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Seed.seedCount >= 1)
         {
+            textPlant.SetActive(false);
             nearTo = null;
         }
     }
