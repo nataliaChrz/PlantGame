@@ -7,12 +7,18 @@ public class Bed : MonoBehaviour
     private GameObject nearTo = null;
 
     public GameObject bedText;
+    public GameObject sleep;
 
-    public int sleepDays;
+
+    public GameObject p1Sprout;
+    public GameObject  p1Growth1;
+
+    public static int sleepDays;
     
     void Start()
     {
         sleepDays = 0;
+        p1Growth1.SetActive(false);
     }
 
     
@@ -22,7 +28,11 @@ public class Bed : MonoBehaviour
         {
             Debug.Log("Key Press");
 
+            StartCoroutine(SleepCorountine());
+
             sleepDays += 1;
+
+           
 
             Debug.Log("Day" + sleepDays);
             nearTo = null;
@@ -54,6 +64,8 @@ public class Bed : MonoBehaviour
         if(PlantPot.water == 2)
         {
             //Plant grows
+            p1Growth1.SetActive(true);
+            p1Sprout.SetActive(false);
             
 
         }
@@ -81,5 +93,16 @@ public class Bed : MonoBehaviour
         {
 
         }
+        if(sleepDays == 6)
+        {
+
+        }
+    }
+
+    IEnumerator SleepCorountine(){
+         sleep.SetActive(true);
+         yield return new WaitForSeconds(3);
+         sleep.SetActive(false);
+
     }
 }
