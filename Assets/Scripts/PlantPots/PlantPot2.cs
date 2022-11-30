@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantPot1 : MonoBehaviour
+public class PlantPot2 : MonoBehaviour
 {
-   public GameObject sprout;
+    public GameObject sprout;
     public GameObject textPlant;
     public GameObject waterText;
     private GameObject nearTo = null;
@@ -19,7 +19,7 @@ public class PlantPot1 : MonoBehaviour
     public GameObject deadPlant;
 
     public bool isDead;
-    
+
 
     public bool planted = false;
 
@@ -36,7 +36,7 @@ public class PlantPot1 : MonoBehaviour
         deadPlant.SetActive(false);
 
         isDead = false;
-        
+
     }
 
     private void Update()
@@ -44,7 +44,7 @@ public class PlantPot1 : MonoBehaviour
         //Plating seed Function
         if (nearTo != null && Input.GetKeyDown(KeyCode.P))
         {
-             Debug.Log("Key Press");
+            Debug.Log("Key Press");
 
             if (Seed.seedCount >= 1)
             {
@@ -59,11 +59,11 @@ public class PlantPot1 : MonoBehaviour
         }
 
         //Watering plant function
-        if(nearTo2 != null && Input.GetKeyDown(KeyCode.O))
+        if (nearTo2 != null && Input.GetKeyDown(KeyCode.O))
         {
             Debug.Log("Key Press for Water");
 
-            if(planted == true)
+            if (planted == true)
             {
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
@@ -83,7 +83,8 @@ public class PlantPot1 : MonoBehaviour
             textPlant.SetActive(true);
             nearTo = other.gameObject;
         }
-        if(other.CompareTag("Player") && planted == true){
+        if (other.CompareTag("Player") && planted == true)
+        {
             waterText.SetActive(true);
             textPlant.SetActive(false);
             nearTo2 = other.gameObject;
@@ -101,27 +102,34 @@ public class PlantPot1 : MonoBehaviour
         }
     }
 
-    public void Growth(){
-        if(Bed.sleepDays == 1){
-            if(water == 1){
-               sprout.SetActive(false);
-               growth1.SetActive(true);
+    public void Growth()
+    {
+        if (Bed.sleepDays == 1)
+        {
+            if (water == 2)
+            {
+                sprout.SetActive(false);
+                growth1.SetActive(true);
 
             }
         }
-        if(Bed.sleepDays == 2){
-            if(water == 2){
+        if (Bed.sleepDays == 2)
+        {
+            if (water == 4)
+            {
                 growth2.SetActive(true);
             }
         }
-        if(Bed.sleepDays == 3){
-            if(water == 3){
+        if (Bed.sleepDays == 3)
+        {
+            if (water == 6)
+            {
                 growth3.SetActive(true);
             }
         }
-        if(Bed.sleepDays == 4)
+        if (Bed.sleepDays == 4)
         {
-            if (water == 4)
+            if (water == 8)
             {
                 growth4.SetActive(true);
             }
@@ -138,12 +146,14 @@ public class PlantPot1 : MonoBehaviour
             }
 
         }
-        if(Bed.sleepDays == 5)
+        if (Bed.sleepDays == 5)
         {
-            if(water == 5 && isDead == false)
+            if (water == 10 && isDead == false)
             {
                 growth5.SetActive(true);
             }
         }
     }
 }
+
+        
