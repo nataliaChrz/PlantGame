@@ -17,6 +17,7 @@ public class PlantPot5 : MonoBehaviour
     public GameObject growth5;
 
     public GameObject deadPlant;
+    public GameObject plantParticle;
 
     public bool isDead;
 
@@ -35,6 +36,7 @@ public class PlantPot5 : MonoBehaviour
         growth5.SetActive(false);
         deadPlant.SetActive(false);
 
+        plantParticle.SetActive(false);
         isDead = false;
 
     }
@@ -51,6 +53,7 @@ public class PlantPot5 : MonoBehaviour
                 sprout.SetActive(true);
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);
+                plantParticle.SetActive(true);
                 planted = true;
                 textPlant.SetActive(false);
                 Debug.Log(planted);

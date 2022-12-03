@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlantPot2 : MonoBehaviour
 {
     public GameObject sprout;
@@ -18,12 +19,18 @@ public class PlantPot2 : MonoBehaviour
 
     public GameObject deadPlant;
 
+    public GameObject plantParticle;
+    
     public bool isDead;
 
 
     public bool planted = false;
 
     public static int water;
+
+
+    public ParticleSystem muzzleflash;
+
 
     public void Start()
     {
@@ -35,7 +42,15 @@ public class PlantPot2 : MonoBehaviour
         growth5.SetActive(false);
         deadPlant.SetActive(false);
 
+        plantParticle.SetActive(false);
+
+        
+
+
+
         isDead = false;
+
+        
 
     }
 
@@ -51,6 +66,7 @@ public class PlantPot2 : MonoBehaviour
                 sprout.SetActive(true);
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);
+                plantParticle.SetActive(true);
                 planted = true;
                 textPlant.SetActive(false);
                 Debug.Log(planted);
@@ -65,6 +81,7 @@ public class PlantPot2 : MonoBehaviour
 
             if (planted == true)
             {
+                muzzleflash.Play();
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
                 waterText.SetActive(false);
