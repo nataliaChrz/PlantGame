@@ -19,6 +19,7 @@ public class PlantPot1 : MonoBehaviour
     public GameObject plantParticle;
 
     public GameObject deadPlant;
+    public ParticleSystem waterParticle;
 
     public bool isDead;
     
@@ -71,6 +72,7 @@ public class PlantPot1 : MonoBehaviour
 
             if(planted == true)
             {
+                waterParticle.Play();
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
                 waterText.SetActive(false);

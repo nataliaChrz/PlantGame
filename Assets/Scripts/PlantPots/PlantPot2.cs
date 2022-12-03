@@ -29,7 +29,7 @@ public class PlantPot2 : MonoBehaviour
     public static int water;
 
 
-    public ParticleSystem muzzleflash;
+    public ParticleSystem waterParticle;
 
 
     public void Start()
@@ -81,7 +81,7 @@ public class PlantPot2 : MonoBehaviour
 
             if (planted == true)
             {
-                muzzleflash.Play();
+                waterParticle.Play();
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
                 waterText.SetActive(false);

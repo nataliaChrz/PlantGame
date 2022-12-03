@@ -1574,6 +1574,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &188374120 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 188374116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &199519643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4211,6 +4216,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &508734160 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 508734156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &509751489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9232,6 +9242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1189717226 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1189717222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189792206
 GameObject:
   m_ObjectHideFlags: 0
@@ -9758,6 +9773,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1196562242 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1196562238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1206292187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10224,6 +10244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1215224358 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1215224354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1233064905
 GameObject:
   m_ObjectHideFlags: 0
@@ -10667,6 +10692,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1239675201 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1239675197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1241040924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e2f1eb1343ee6b04588ea7bd8a37cdc3, type: 3}
@@ -10980,6 +11010,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1265111355 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1265111351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1275450540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11472,6 +11507,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1287145019 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1287145015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1315769616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 678334051006771343, guid: 385f5c9860bf98d498bbbdbcc0b4f626, type: 3}
@@ -14968,6 +15008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1da1ae058ada42b156f5b001281be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1667027034 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198039942544698878, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
+  m_PrefabInstance: {fileID: 1667027030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1669633590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19754,6 +19799,7 @@ MonoBehaviour:
   growth5: {fileID: 5435499961370110576}
   deadPlant: {fileID: 898908009}
   plantParticle: {fileID: 1550482296}
+  waterParticle: {fileID: 1239675201}
   isDead: 0
   planted: 0
 --- !u!23 &3645781511837400970
@@ -19885,6 +19931,7 @@ MonoBehaviour:
   growth5: {fileID: 427638606}
   deadPlant: {fileID: 565624543}
   plantParticle: {fileID: 128254122}
+  waterParticle: {fileID: 508734160}
   isDead: 0
   planted: 0
 --- !u!1 &3926694259994860789
@@ -24803,6 +24850,7 @@ MonoBehaviour:
   growth5: {fileID: 7923739047452636982}
   deadPlant: {fileID: 566192373}
   plantParticle: {fileID: 2017308672}
+  waterParticle: {fileID: 1215224358}
   isDead: 0
   planted: 0
 --- !u!33 &4452137962650105258
@@ -25443,6 +25491,7 @@ MonoBehaviour:
   growth5: {fileID: 557107019974499513}
   deadPlant: {fileID: 813566228}
   plantParticle: {fileID: 1509454183}
+  waterParticle: {fileID: 1265111355}
   isDead: 0
   planted: 0
 --- !u!33 &7064714202885838868
@@ -25697,7 +25746,7 @@ MonoBehaviour:
   plantParticle: {fileID: 129041218}
   isDead: 0
   planted: 0
-  muzzleflash: {fileID: 879031874}
+  waterParticle: {fileID: 879031874}
 --- !u!65 &7888188472783849118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25747,6 +25796,7 @@ MonoBehaviour:
   growth5: {fileID: 5963854819476500787}
   deadPlant: {fileID: 108041617}
   plantParticle: {fileID: 8070644}
+  waterParticle: {fileID: 1196562242}
   isDead: 0
   planted: 0
 --- !u!1 &7908105208776038035
@@ -26029,6 +26079,7 @@ MonoBehaviour:
   growth5: {fileID: 1109023466}
   deadPlant: {fileID: 1657554409}
   plantParticle: {fileID: 451663614}
+  waterParticle: {fileID: 188374120}
   isDead: 0
   planted: 0
 --- !u!65 &9072771014494708386
@@ -26067,6 +26118,7 @@ MonoBehaviour:
   deadPlant: {fileID: 521943065}
   plantParticle: {fileID: 1406571098}
   isDead: 0
+  waterParticle: {fileID: 1287145019}
   planted: 0
 --- !u!23 &9117886959299945199
 MeshRenderer:
@@ -26133,6 +26185,7 @@ MonoBehaviour:
   deadPlant: {fileID: 19646553}
   plantParticle: {fileID: 1213435288}
   isDead: 0
+  waterParticle: {fileID: 1667027034}
   planted: 0
 --- !u!4 &9122383355497356573
 Transform:
@@ -26194,5 +26247,6 @@ MonoBehaviour:
   growth5: {fileID: 1208988224}
   plantParticle: {fileID: 807525807}
   deadPlant: {fileID: 1715032651}
+  waterParticle: {fileID: 1189717226}
   isDead: 0
   planted: 0
