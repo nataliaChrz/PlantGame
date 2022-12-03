@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ed477000ab39e4d41ac0bdd2e0cee4c0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Best Valentina
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3b317b7f7fe528443b8fb21fafa2665d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
