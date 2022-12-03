@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlantPot10 : MonoBehaviour
 {
@@ -26,9 +27,11 @@ public class PlantPot10 : MonoBehaviour
     public bool planted = false;
 
     public static int water;
+    private AudioSource Plant;
 
     public void Start()
     {
+       Plant = GetComponent<AudioSource>();
         sprout.SetActive(false);
         growth1.SetActive(false);
         growth2.SetActive(false);
@@ -52,6 +55,7 @@ public class PlantPot10 : MonoBehaviour
 
             if (Seed.seedCount >= 1)
             {
+                Plant.Play();
                 sprout.SetActive(true);
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);

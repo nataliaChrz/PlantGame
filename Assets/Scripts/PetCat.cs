@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PetCat : MonoBehaviour
 {
     public GameObject catText;
     public ParticleSystem catParticle;
-   
 
-    
+    private AudioSource catMeow;
 
+    public void Start()
+    {
+        catMeow = GetComponent<AudioSource>();
+    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -24,7 +28,7 @@ public class PetCat : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.C))
         {
-
+            catMeow.Play();
             catParticle.Play();
 
         }
