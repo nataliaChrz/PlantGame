@@ -22777,7 +22777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859421558714476396, guid: e59196fedeaf48d4ea8bec6fe57ed0d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.94
+      value: 13.82
       objectReference: {fileID: 0}
     - target: {fileID: 5859421558714476396, guid: e59196fedeaf48d4ea8bec6fe57ed0d3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23107,7 +23107,7 @@ CapsuleCollider:
   m_Radius: 0.3
   m_Height: 1.8096893
   m_Direction: 1
-  m_Center: {x: 0, y: 0.40484464, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1509454183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f2dba9e16cd347f44a395b8204544ee5, type: 3}
@@ -23424,19 +23424,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521884680}
   m_Mesh: {fileID: -5882713962205943656, guid: 27e174a0273c24d46a9830f97669efb6, type: 3}
---- !u!65 &1523201270
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283806816}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.2160263, y: 1.2376683, z: 3.2246642}
-  m_Center: {x: 0.38089535, y: 0.60141593, z: -0.031979084}
 --- !u!114 &1523201271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23451,6 +23438,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bedText: {fileID: 161877871}
   sleep: {fileID: 124831260}
+--- !u!64 &1523201276
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283806816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6467405716425129384, guid: 726449fd1e9621d4cbc8c5fc94f17cb0, type: 3}
 --- !u!1001 &1531170085
 PrefabInstance:
   m_ObjectHideFlags: 0
