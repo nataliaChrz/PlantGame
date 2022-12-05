@@ -33,7 +33,7 @@ public class Seed : MonoBehaviour
             
                 pickS.Play();
                 seedObj.SetActive(false);
-                seedCount += 10;
+                seedCount += 11;
                 textPick.SetActive(false);
 
                 Debug.Log("Seed has been picked up " + seedCount);
@@ -44,7 +44,7 @@ public class Seed : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && seedCount == 0)
         {
 
             textPick.SetActive(true);
