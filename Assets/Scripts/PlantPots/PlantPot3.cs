@@ -8,8 +8,14 @@ public class PlantPot3 : MonoBehaviour
     public GameObject sprout;
     public GameObject textPlant;
     public GameObject waterText;
+    public GameObject factText;
+
+    public GameObject factPanel;
+
+
     private GameObject nearTo = null;
     private GameObject nearTo2 = null;
+    private GameObject nearPlantFacts;
 
     public GameObject growth1;
     public GameObject growth2;
@@ -17,12 +23,11 @@ public class PlantPot3 : MonoBehaviour
     public GameObject growth4;
     public GameObject growth5;
 
-
-    public GameObject deadPlant;
-
     public GameObject plantParticle;
 
+    public GameObject deadPlant;
     public ParticleSystem waterParticle;
+
     public bool isDead;
 
 
@@ -42,8 +47,8 @@ public class PlantPot3 : MonoBehaviour
         growth5.SetActive(false);
         deadPlant.SetActive(false);
 
-
         plantParticle.SetActive(false);
+
         isDead = false;
 
     }
@@ -61,6 +66,7 @@ public class PlantPot3 : MonoBehaviour
                 sprout.SetActive(true);
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);
+
                 plantParticle.SetActive(true);
                 planted = true;
                 textPlant.SetActive(false);
@@ -76,7 +82,6 @@ public class PlantPot3 : MonoBehaviour
 
             if (planted == true)
             {
-
                 waterParticle.Play();
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
@@ -84,6 +89,19 @@ public class PlantPot3 : MonoBehaviour
             }
             nearTo2 = null;
         }
+        //Show plant fact panel
+        if (nearPlantFacts != null && Input.GetKeyDown(KeyCode.Mouse0) && planted == true)
+        {
+            Debug.Log("Plant Facts Opening");
+
+            if (planted == true)
+            {
+                factPanel.SetActive(true);
+                //Show Plant fact panel
+
+            }
+        }
+
 
         Growth();
     }
@@ -101,6 +119,30 @@ public class PlantPot3 : MonoBehaviour
             waterText.SetActive(true);
             textPlant.SetActive(false);
             nearTo2 = other.gameObject;
+            factText.SetActive(true);
+            nearPlantFacts = other.gameObject;
+        }
+
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && planted == true)
+        {
+            if (other.CompareTag("Player") && Seed.seedCount >= 1)
+            {
+
+                textPlant.SetActive(true);
+                nearTo = other.gameObject;
+            }
+            if (other.CompareTag("Player") && planted == true)
+            {
+                waterText.SetActive(true);
+                textPlant.SetActive(false);
+                nearTo2 = other.gameObject;
+                factText.SetActive(true);
+                nearPlantFacts = other.gameObject;
+            }
         }
     }
 
@@ -112,6 +154,12 @@ public class PlantPot3 : MonoBehaviour
             waterText.SetActive(false);
             nearTo = null;
             nearTo2 = null;
+        }
+
+        if (other.CompareTag("Player") && planted == true)
+        {
+            //put panel text here
+            factText.SetActive(false);
         }
     }
 
