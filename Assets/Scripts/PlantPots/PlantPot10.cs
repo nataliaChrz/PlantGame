@@ -143,6 +143,7 @@ public class PlantPot10 : MonoBehaviour
                 factText.SetActive(true);
                 nearPlantFacts = other.gameObject;
             }
+
         }
     }
 
@@ -160,6 +161,8 @@ public class PlantPot10 : MonoBehaviour
         {
             //put panel text here
             factText.SetActive(false);
+            factPanel.SetActive(false);
+            waterText.SetActive(false);
         }
     }
 

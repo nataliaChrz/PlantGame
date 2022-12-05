@@ -101,7 +101,7 @@ public class PlantPot1 : MonoBehaviour
                 
             }
         }
-       
+
 
         Growth();
     }
@@ -161,6 +161,7 @@ public class PlantPot1 : MonoBehaviour
             //put panel text here
             factText.SetActive(false);
             factPanel.SetActive(false);
+            waterText.SetActive(false);
         }
     }
 

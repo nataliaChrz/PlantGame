@@ -38,7 +38,9 @@ public class Bed : MonoBehaviour
             nearTo = null;
         }
 
-        Days();
+     
+
+       
     }
 
     public void OnTriggerEnter(Collider other)
@@ -69,33 +71,6 @@ public class Bed : MonoBehaviour
         }
     }
 
-    public void Days()
-    {
-        if (sleepDays == 1)
-        {
-            Water();
-        }
-        if (sleepDays == 2)
-        {
-
-        }
-        if (sleepDays == 3)
-        {
-
-        }
-        if (sleepDays == 4)
-        {
-
-        }
-        if (sleepDays == 5)
-        {
-
-        }
-        if(sleepDays == 6)
-        {
-
-        }
-    }
 
     IEnumerator SleepCorountine(){
          sleep.SetActive(true);

@@ -7,6 +7,9 @@ public class Seed : MonoBehaviour
 {
     public static int seedCount;
     public GameObject seedObj;
+    public GameObject wholeSeed;
+    public GameObject seedParticle;
+
     public GameObject textPick;
 
     private AudioSource pickS;
@@ -27,9 +30,9 @@ public class Seed : MonoBehaviour
         if (nearTo != null && Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("Key Press");
-            
 
-           
+
+            seedParticle.SetActive(true);
             
                 pickS.Play();
                 seedObj.SetActive(false);
@@ -39,6 +42,19 @@ public class Seed : MonoBehaviour
                 Debug.Log("Seed has been picked up " + seedCount);
             
             nearTo = null;
+        }
+
+        if(Bed.sleepDays >= 1 && seedCount >= 1)
+        {
+            seedCount = 0;
+            Debug.Log(seedCount);
+            seedObj.SetActive(false);
+            textPick.SetActive(false);
+        }
+
+        if(Bed.sleepDays >= 1 && seedCount == 0)
+        {
+            wholeSeed.SetActive(false);
         }
     }
 

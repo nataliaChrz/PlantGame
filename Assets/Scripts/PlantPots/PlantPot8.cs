@@ -160,6 +160,8 @@ public class PlantPot8 : MonoBehaviour
         {
             //put panel text here
             factText.SetActive(false);
+            factPanel.SetActive(false);
+            waterText.SetActive(false);
         }
     }
     public void Growth()
