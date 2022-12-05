@@ -16,6 +16,8 @@ public class Seed : MonoBehaviour
 
     private GameObject nearTo = null;
 
+    public GameObject animArrow;
+
     //Make an object with text "Press P to pick up"
     //public GameObject seedText;
 
@@ -38,6 +40,7 @@ public class Seed : MonoBehaviour
                 seedObj.SetActive(false);
                 seedCount += 11;
                 textPick.SetActive(false);
+            animArrow.SetActive(false);
 
                 Debug.Log("Seed has been picked up " + seedCount);
             

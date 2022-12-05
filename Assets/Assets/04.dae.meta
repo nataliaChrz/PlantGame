@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material-Plaster
+    second: {fileID: 2100000, guid: 4d7a8f3199f3bb94eb1640e74a61ec71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material-Plaster__2_
     second: {fileID: 2100000, guid: 67ec390e84eafc745b316eb95bc64023, type: 2}
   materials:

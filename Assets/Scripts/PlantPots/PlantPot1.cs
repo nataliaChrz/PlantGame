@@ -29,6 +29,7 @@ public class PlantPot1 : MonoBehaviour
     public ParticleSystem waterParticle;
 
     public bool isDead;
+
     
 
     public bool planted = false;
@@ -50,6 +51,7 @@ public class PlantPot1 : MonoBehaviour
         plantParticle.SetActive(false);
 
         isDead = false;
+       
         
     }
 
@@ -98,9 +100,10 @@ public class PlantPot1 : MonoBehaviour
             {
                 factPanel.SetActive(true);
                 //Show Plant fact panel
-                
             }
         }
+
+       
 
 
         Growth();
