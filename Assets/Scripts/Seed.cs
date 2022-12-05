@@ -11,6 +11,8 @@ public class Seed : MonoBehaviour
 
     private AudioSource pickS;
 
+    private GameObject nearTo = null;
+
     //Make an object with text "Press P to pick up"
     //public GameObject seedText;
 
@@ -19,33 +21,42 @@ public class Seed : MonoBehaviour
         seedObj.SetActive(true);
         pickS = GetComponent<AudioSource>();
     }
-    
+
+    public void Update()
+    {
+        if (nearTo != null && Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("Key Press");
+            
+
+           
+            
+                pickS.Play();
+                seedObj.SetActive(false);
+                seedCount += 10;
+                textPick.SetActive(false);
+
+                Debug.Log("Seed has been picked up " + seedCount);
+            
+            nearTo = null;
+        }
+    }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+
             textPick.SetActive(true);
-            
+            nearTo = other.gameObject;
         }
+        
     }
 
-    public void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player") && Input.GetKey(KeyCode.P))
-        {
-            pickS.Play();
-            seedObj.SetActive(false);
-            seedCount += 1;
-            textPick.SetActive(false);
-            
-            Debug.Log("Seed has been picked up " + seedCount);
-            
-        }
-    }
 
     public void OnTriggerExit(Collider other)
     {
         textPick.SetActive(false);
+        nearTo = null;
     }
 }
