@@ -90,7 +90,7 @@ public class PlantPot5 : MonoBehaviour
         }
 
         //Watering plant function
-        if (nearTo2 != null && Input.GetKeyDown(KeyCode.O))
+        if (nearTo2 != null && Input.GetKeyDown(KeyCode.Mouse1))
         {
             Debug.Log("Key Press for Water");
 
