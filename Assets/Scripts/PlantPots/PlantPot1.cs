@@ -37,9 +37,14 @@ public class PlantPot1 : MonoBehaviour
     public static int water;
     private AudioSource Plant;
 
+    public AudioSource waterSound;
+
     public void Start()
     {
         Plant = GetComponent<AudioSource>();
+
+        waterSound = GetComponent<AudioSource>();
+
         sprout.SetActive(false);
         growth1.SetActive(false);
         growth2.SetActive(false);
@@ -85,6 +90,9 @@ public class PlantPot1 : MonoBehaviour
             if(planted == true)
             {
                 waterParticle.Play();
+                waterSound.Play();
+                
+
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
                 waterText.SetActive(false);
@@ -102,8 +110,6 @@ public class PlantPot1 : MonoBehaviour
                 //Show Plant fact panel
             }
         }
-
-       
 
 
         Growth();
