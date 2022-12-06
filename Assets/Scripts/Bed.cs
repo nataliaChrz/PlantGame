@@ -7,10 +7,15 @@ public class Bed : MonoBehaviour
     private GameObject nearTo = null;
 
     public GameObject bedText;
-    public GameObject sleep;
+    public GameObject sleep1;
+    public GameObject sleep2;
+    public GameObject sleep3;
+    public GameObject sleep4;
+    public GameObject sleep5;
 
 
-    
+
+
 
     public static int sleepDays;
     
@@ -27,9 +32,10 @@ public class Bed : MonoBehaviour
         {
             Debug.Log("Key Press");
 
+            sleepDays += 1;
             StartCoroutine(SleepCorountine());
 
-            sleepDays += 1;
+           
             bedText.SetActive(false);
 
 
@@ -61,21 +67,43 @@ public class Bed : MonoBehaviour
         }
     }
 
-    public void Water()
-    {
-        if(PlantPot.water == 2)
-        {
-            
-            
-
-        }
-    }
-
 
     IEnumerator SleepCorountine(){
-         sleep.SetActive(true);
-         yield return new WaitForSeconds(3);
-         sleep.SetActive(false);
+        // sleep1.SetActive(true);
+        // yield return new WaitForSeconds(3);
+         //sleep1.SetActive(false);
+
+        if(sleepDays == 1)
+        {
+            sleep1.SetActive(true);
+            yield return new WaitForSeconds(3);
+            sleep1.SetActive(false);
+        }
+        if(sleepDays == 2)
+        {
+            sleep2.SetActive(true);
+            yield return new WaitForSeconds(3);
+            sleep2.SetActive(false);
+        }
+        if(sleepDays == 3)
+        {
+            sleep3.SetActive(true);
+            yield return new WaitForSeconds(3);
+            sleep3.SetActive(false);
+        }
+        if(sleepDays == 4)
+        {
+            sleep4.SetActive(true);
+            yield return new WaitForSeconds(3);
+            sleep4.SetActive(false);
+        }
+        if(sleepDays == 5)
+        {
+            sleep5.SetActive(true);
+            yield return new WaitForSeconds(3);
+            sleep5.SetActive(false);
+        }
+       
 
     }
 }
