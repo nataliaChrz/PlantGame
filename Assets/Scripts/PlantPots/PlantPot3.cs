@@ -116,6 +116,7 @@ public class PlantPot3 : MonoBehaviour
                 PlantAudioSource.PlayOneShot(factClip);
                 //Show Plant fact panel
             }
+
         }
 
 
@@ -159,6 +160,7 @@ public class PlantPot3 : MonoBehaviour
                 factText.SetActive(true);
                 nearPlantFacts = other.gameObject;
             }
+
         }
 
     }
@@ -171,6 +173,7 @@ public class PlantPot3 : MonoBehaviour
             waterText.SetActive(false);
             nearTo = null;
             nearTo2 = null;
+            nearPlantFacts = null;
         }
 
         if (other.CompareTag("Player") && planted == true)
@@ -179,6 +182,7 @@ public class PlantPot3 : MonoBehaviour
             factText.SetActive(false);
             factPanel.SetActive(false);
             waterText.SetActive(false);
+
         }
     }
 

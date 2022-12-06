@@ -118,6 +118,7 @@ public class PlantPot5 : MonoBehaviour
                 PlantAudioSource.PlayOneShot(factClip);
                 //Show Plant fact panel
             }
+
         }
 
 
@@ -173,6 +174,7 @@ public class PlantPot5 : MonoBehaviour
             waterText.SetActive(false);
             nearTo = null;
             nearTo2 = null;
+            nearPlantFacts = null;
         }
 
         if (other.CompareTag("Player") && planted == true)
