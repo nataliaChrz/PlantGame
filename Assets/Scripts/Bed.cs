@@ -13,7 +13,7 @@ public class Bed : MonoBehaviour
     public GameObject sleep4;
     public GameObject sleep5;
 
-
+    public GameObject sleep6End;
 
 
 
@@ -102,6 +102,10 @@ public class Bed : MonoBehaviour
             sleep5.SetActive(true);
             yield return new WaitForSeconds(3);
             sleep5.SetActive(false);
+        }
+        if(sleepDays == 6)
+        {
+            sleep6End.SetActive(true);
         }
        
 

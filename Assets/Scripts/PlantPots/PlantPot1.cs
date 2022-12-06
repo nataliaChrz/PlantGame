@@ -29,21 +29,27 @@ public class PlantPot1 : MonoBehaviour
     public ParticleSystem waterParticle;
 
     public bool isDead;
+    private bool factsActive = false;
 
-    
 
-    public bool planted = false;
+    public bool planted;
 
     public static int water;
-    private AudioSource Plant;
+    private AudioSource PlantAudioSource;
 
-    public AudioSource waterSound;
+    public AudioClip plantingClip;
+    public AudioClip wateringClip;
+    public AudioClip factClip;
+
+    public GameObject textDead;
+    public GameObject textAlive;
+    public GameObject textPlanted;
 
     public void Start()
     {
-        Plant = GetComponent<AudioSource>();
+        PlantAudioSource = GetComponent<AudioSource>();
 
-        waterSound = GetComponent<AudioSource>();
+        
 
         sprout.SetActive(false);
         growth1.SetActive(false);
@@ -56,7 +62,7 @@ public class PlantPot1 : MonoBehaviour
         plantParticle.SetActive(false);
 
         isDead = false;
-       
+        planted = false;       
         
     }
 
@@ -69,7 +75,7 @@ public class PlantPot1 : MonoBehaviour
 
             if (Seed.seedCount >= 1)
             {
-                Plant.Play();
+                PlantAudioSource.PlayOneShot(plantingClip);
                 sprout.SetActive(true);
                 Seed.seedCount = Seed.seedCount -= 1;
                 Debug.Log("Seed has been planted " + Seed.seedCount);
@@ -90,9 +96,9 @@ public class PlantPot1 : MonoBehaviour
             if(planted == true)
             {
                 waterParticle.Play();
-                waterSound.Play();
-                
 
+                
+                PlantAudioSource.PlayOneShot(wateringClip);
                 water += 1;
                 Debug.Log("Plant has been watered " + water);
                 waterText.SetActive(false);
@@ -100,13 +106,15 @@ public class PlantPot1 : MonoBehaviour
             nearTo2 = null;
         }
         //Show plant fact panel
-        if(nearPlantFacts != null && Input.GetKeyDown(KeyCode.Mouse0) && planted == true)
+        if(nearPlantFacts != null && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log("Plant Facts Opening");
 
             if(planted == true)
             {
-                factPanel.SetActive(true);
+                factsActive = !factsActive;
+                factPanel.SetActive(factsActive);
+                PlantAudioSource.PlayOneShot(factClip);
                 //Show Plant fact panel
             }
         }
@@ -175,26 +183,28 @@ public class PlantPot1 : MonoBehaviour
     }
 
     public void Growth(){
-        if(Bed.sleepDays == 1){
+        if(Bed.sleepDays == 1 && planted == true){
             if(water == 1){
                sprout.SetActive(false);
                growth1.SetActive(true);
 
             }
         }
-        if(Bed.sleepDays == 2){
+        if(Bed.sleepDays == 2 && planted == true)
+        {
             if(water == 2){
                 growth2.SetActive(true);
             }
         }
-        if(Bed.sleepDays == 3){
+        if(Bed.sleepDays == 3 && planted == true)
+        {
             if(water == 3){
                 growth3.SetActive(true);
             }
         }
-        if(Bed.sleepDays == 4)
+        if(Bed.sleepDays == 4 && planted == true)
         {
-            if (water == 4)
+            if (water == 4 && planted == true)
             {
                 growth4.SetActive(true);
             }
@@ -211,12 +221,34 @@ public class PlantPot1 : MonoBehaviour
             }
 
         }
-        if(Bed.sleepDays == 5)
+        if(Bed.sleepDays == 5 && planted == true)
         {
             if(water == 5 && isDead == false)
             {
                 growth5.SetActive(true);
             }
         }
+        if (Bed.sleepDays == 6)
+        {
+            if (isDead == true)
+            {
+                textDead.SetActive(true);
+                textAlive.SetActive(false);
+                textPlanted.SetActive(false);
+            }
+            if (isDead == false)
+            {
+                textAlive.SetActive(true);
+                textDead.SetActive(false);
+                textPlanted.SetActive(false);
+            }
+            if (planted == false)
+            {
+                textAlive.SetActive(false);
+                textDead.SetActive(false);
+                textPlanted.SetActive(true);
+            }
+        }
+        
     }
 }
