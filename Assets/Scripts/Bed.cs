@@ -15,14 +15,14 @@ public class Bed : MonoBehaviour
 
     public GameObject sleep6End;
 
-
+    private AudioSource sleepSound;
 
     public static int sleepDays;
     
     void Start()
     {
         sleepDays = 0;
-        
+        sleepSound = GetComponent<AudioSource>();
     }
 
     
@@ -32,6 +32,7 @@ public class Bed : MonoBehaviour
         {
             Debug.Log("Key Press");
 
+            sleepSound.Play();
             sleepDays += 1;
             StartCoroutine(SleepCorountine());
 
