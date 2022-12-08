@@ -23,6 +23,7 @@ public class Bed : MonoBehaviour
     {
         sleepDays = 0;
         sleepSound = GetComponent<AudioSource>();
+        Cursor.visible = true;
     }
 
     
