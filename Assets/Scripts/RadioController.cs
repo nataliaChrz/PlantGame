@@ -11,6 +11,11 @@ public class RadioController : MonoBehaviour
     {
         radioAudioSource = GetComponent<AudioSource>();
     }
+    
+    public void AudioVolume(float volume)
+    {
+        radioAudioSource.volume = volume;
+    }
 
     public void PlayAudio()
     {
