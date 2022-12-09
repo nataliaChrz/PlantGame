@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+
 
 public class RadioController : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class RadioController : MonoBehaviour
     private int trackIndex;
 
     [Header("Text UI")]
-    [SerializeField] private Text trackTextUI;
+    [SerializeField] private TMP_Text trackTextUI;
 
     private AudioSource radioAudioSource;
 
@@ -22,6 +24,7 @@ public class RadioController : MonoBehaviour
 
         trackIndex = 0;
         radioAudioSource.clip = audioTracks[trackIndex].trackAudioClip;
+       
         trackTextUI.text = audioTracks[trackIndex].name;
     }
 
