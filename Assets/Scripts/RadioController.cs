@@ -25,6 +25,7 @@ public class RadioController : MonoBehaviour
         radioAudioSource = GetComponent<AudioSource>();
 
         trackIndex = 0;
+
         radioAudioSource.clip = audioTracks[trackIndex].trackAudioClip;
        
         trackTextUI.text = audioTracks[trackIndex].name;
@@ -47,8 +48,10 @@ public class RadioController : MonoBehaviour
     {
         if (trackIndex < audioTracks.Length - 1)
         {
+
+
             trackIndex++;
-            
+            UpdateTrack(trackIndex);
         }
     }
 
@@ -56,6 +59,7 @@ public class RadioController : MonoBehaviour
     {
         if (trackIndex >= 1)
         {
+
             trackIndex--;
             UpdateTrack(trackIndex);
         }
