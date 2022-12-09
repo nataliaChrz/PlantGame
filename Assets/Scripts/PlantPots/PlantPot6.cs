@@ -117,7 +117,7 @@ public class PlantPot6 : MonoBehaviour
                 PlantAudioSource.PlayOneShot(factClip);
                 //Show Plant fact panel
             }
-
+            nearPlantFacts = null;
         }
 
 

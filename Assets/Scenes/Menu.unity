@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581.7, y: 195}
+  m_AnchoredPosition: {x: 581.7, y: 168}
   m_SizeDelta: {x: 234.7, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189691537
@@ -400,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 582.75, y: -62.4}
+  m_AnchoredPosition: {x: 582.75, y: -89.4}
   m_SizeDelta: {x: 234.7, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422437284
@@ -540,11 +540,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1417314632}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.2, y: 47.6}
+  m_AnchoredPosition: {x: 114, y: -36}
   m_SizeDelta: {x: 205.8761, y: 82.3182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &745547051
@@ -1019,11 +1019,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1417314632}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 584, y: 133}
+  m_AnchoredPosition: {x: 584, y: 106}
   m_SizeDelta: {x: 348.8054, y: 41.8239}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036967715
@@ -1046,8 +1046,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sow & Grow is a plant growing game, learn more about different types of
+  m_text: 'Sow & Grow is a plant growing game, learn more about different types of
     plants and how to take care of them!
+
+    Go to sleep to see the progress of
+    your plants!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1155,8 +1158,8 @@ Transform:
   - {fileID: 189691536}
   - {fileID: 1750445591}
   - {fileID: 422437283}
-  - {fileID: 745547050}
   - {fileID: 1036967714}
+  - {fileID: 745547050}
   m_Father: {fileID: 1835965197}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1465,7 +1468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 586.5, y: 67.3}
+  m_AnchoredPosition: {x: 586.5, y: 15.2}
   m_SizeDelta: {x: 343.8997, y: 43.4591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750445592
