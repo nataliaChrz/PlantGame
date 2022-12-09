@@ -42,7 +42,7 @@ public class RadioController : MonoBehaviour
         if (trackIndex >= 1)
         {
             trackIndex--;
-            
+            UpdateTrack(trackIndex);
         }
     }
 
