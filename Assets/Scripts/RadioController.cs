@@ -19,6 +19,7 @@ public class RadioController : MonoBehaviour
     private AudioSource radioAudioSource;
 
     public GameObject uiRadio;
+    public ParticleSystem radioParticle;
 
     private void Start() 
     {
@@ -49,9 +50,11 @@ public class RadioController : MonoBehaviour
         if (trackIndex < audioTracks.Length - 1)
         {
 
-
+            radioParticle.Clear();
             trackIndex++;
             UpdateTrack(trackIndex);
+            radioParticle.Pause();
+
         }
     }
 
@@ -59,9 +62,11 @@ public class RadioController : MonoBehaviour
     {
         if (trackIndex >= 1)
         {
-
+            radioParticle.Clear();
             trackIndex--;
             UpdateTrack(trackIndex);
+            
+            radioParticle.Pause();
         }
     }
 
@@ -69,6 +74,7 @@ public class RadioController : MonoBehaviour
     {
         radioAudioSource.clip = audioTracks[index].trackAudioClip;
         trackTextUI.text = audioTracks[index].name;
+        
     }
     
     public void AudioVolume(float volume)
@@ -79,15 +85,19 @@ public class RadioController : MonoBehaviour
     public void PlayAudio()
     {
         radioAudioSource.Play();
+        radioParticle.Play();
     }
     
     public void PauseAudio()
     {
-        radioAudioSource.Pause();  
+        radioParticle.Clear();
+        radioParticle.Pause();
     }
 
     public void StopAudio()
     {
         radioAudioSource.Stop();
+        radioParticle.Clear();
+        radioParticle.Pause();
     }
 }

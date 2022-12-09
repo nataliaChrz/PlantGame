@@ -4069,6 +4069,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1769b3cabf10eb44943906dc422e484, type: 2}
   trackTextUI: {fileID: 143540937}
   uiRadio: {fileID: 187808416}
+  radioParticle: {fileID: 198858562786994457}
 --- !u!82 &188137479
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45816,7 +45817,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -50454,7 +50455,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -55092,7 +55093,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
