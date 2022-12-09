@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4e2c0c670df9e46ad231c1c9978bfb, type: 3}
   m_Name: rain-and-nostalgia-version-60s-10820
   m_EditorClassIdentifier: 
-  trackAudioClip: {fileID: 0}
+  trackAudioClip: {fileID: 8300000, guid: 0685bd497beb0244d90df51e2b31ec80, type: 3}
