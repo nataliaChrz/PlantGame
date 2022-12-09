@@ -91,7 +91,7 @@ public class RadioController : MonoBehaviour
     public void PauseAudio()
     {
         radioAudioSource.Pause();
-        radioParticle.Clear();
+        
         radioParticle.Pause();
     }
 
