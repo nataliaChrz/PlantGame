@@ -18,6 +18,8 @@ public class RadioController : MonoBehaviour
 
     private AudioSource radioAudioSource;
 
+    public GameObject uiRadio;
+
     private void Start() 
     {
         radioAudioSource = GetComponent<AudioSource>();
@@ -27,8 +29,21 @@ public class RadioController : MonoBehaviour
        
         trackTextUI.text = audioTracks[trackIndex].name;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            uiRadio.SetActive(true);
 
- public void SkipForwardButton()
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        uiRadio.SetActive(false);
+    }
+
+    public void SkipForwardButton()
     {
         if (trackIndex < audioTracks.Length - 1)
         {
